@@ -1,8 +1,18 @@
 import sqlite3
 
-con = sqlite3.connect('web_server.db')
+con = sqlite3.connect('web_server.db', check_same_thread=False)
 
 cur = con.cursor()
+
+
+def get_credentials(username, password):
+    for row in cur.execute(f"SELECT username, password FROM users WHERE username = '{username}' and password = '{password}'"):
+        return row[0], row[1]
+    return 'Login error'
+
+
+# get_credentials('admin', 'passwd')
+# get_passwd('')
 
 # cur.execute('''DROP TABLE users''')
 # cur.execute('''DROP TABLE roles''')
@@ -19,7 +29,7 @@ cur = con.cursor()
 # roles = [(1, 'Administrator'), (2, 'User')]
 # cur.executemany('''INSERT INTO roles VALUES(?, ?)''', roles)
 
-for row in cur.execute('''SELECT * FROM roles'''):
-    print(row)
+# for row in cur.execute('''SELECT * FROM users'''):
+#     print(row)
 
 # con.commit()
