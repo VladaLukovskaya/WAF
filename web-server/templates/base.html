@@ -4,6 +4,8 @@
 
 {% block head %}
     {{ super() }}
+<!--        <link rel="icon" type="image/png" sizes="32x32" href="../static/favicon-32x32.png">-->
+<!--        <link rel="icon" type="image/png" sizes="16x16" href="../static/favicon-16x16.png">-->
         <link rel="shortcut icon" href="{{ url_for('static', filename = 'favicon.ico') }}" type="image/x-icon">
         <link rel="icon" href="{{ url_for('static', filename = 'favicon.ico') }}" type="image/x-icon">
 {% endblock %}
@@ -24,40 +26,11 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><a href="/show_applic">Заявки</a></li>
-                    <li><a href="/show_blank">Бланки</a></li>
-                    <li><a href="/show_client">Клиенты</a></li>
-                    <li><a href="/show_client_doc">Док-ты клиента</a></li>
-                    <li><a href="/show_country">Страны</a></li>
-                    <li><a href="/show_employee">Сотрудники</a></li>
-                    <li><a href="/show_lan_cod">Код-р языков</a></li>
-                    <li><a href="/show_lan_know">Знание языка</a></li>
-                    <li><a href="/show_legal">Юр. лица</a></li>
-                    <li><a href="/show_natural">Физ. лица</a></li>
-                    <li><a href="/show_log">Журнал регистрации</a></li>
-                    <li><a href="/show_partic">Участники</a></li>
-                    <li><a href="/show_prof_cod">Код-р степени знания яз.</a></li>
-                    <li><a href="/show_trustee">Доверенные лица</a></li>
-                    <li><a href="/show_service">Услуги</a></li>
                 </ul>
                 <a class="navbar-brand" href="/">Редактура</a>
                 <ul class="nav navbar-nav">
                     <li><a href="/add_form_applic">Заявки</a></li>
-                    <li><a href="/add_form_forms">Бланки</a></li>
-                    <li><a href="/add_form_client">Клиенты</a></li>
-                    <li><a href="/add_form_cl_doc">Док-ты клиента</a></li>
-                    <li><a href="/add_form_country">Страны</a></li>
-                    <li><a href="/add_form_employee">Сотрудники</a></li>
-                    <li><a href="/add_form_lang_cod">Код-р языков</a></li>
-                    <li><a href="/add_form_lan_know">Знание языка</a></li>
-                    <li><a href="/add_form_legal">Юр. лица</a></li>
-                    <li><a href="/add_form_nat">Физ. лица</a></li>
-                    <li><a href="/add_form_logs">Журнал регистрации</a></li>
-                    <li><a href="/add_form_partic">Участники</a></li>
-                    <li><a href="/add_form_trustee">Доверенные лица</a></li>
-                    <li><a href="/add_form_log_to_app">Заявка-Журнал</a></li>
-                    <li><a href="/add_form_proxy">Доверенности</a></li>
                     <li><a href="/add_form_regist">Регистрация</a></li>
-                    <li><a href="/add_form_service">Услуги</a></li>
                 </ul>
                 <ul class="nav navbar-nav">
                     <li><a href="/logout">Выход</a></li>

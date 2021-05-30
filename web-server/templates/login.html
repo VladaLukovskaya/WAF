@@ -4,11 +4,10 @@
 {% block title %}Flasky{% endblock %}
 {% block navbar %}{% endblock %}
 {% block page_content %}
-    <form method="post">
-    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+<form method="post">
     <div class="page-header">
         <h1>Приветствую!</h1>
     </div>
     {{ wtf.quick_form(form) }}
-    </form>>
+</form>
 {% endblock %}

@@ -1,10 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}Flasky{% endblock %}
+
+{% block body %}
+<div method="post"></div>
+    <div class="page-header">
+        <h1 style="margin-left:0.9em">You should log in first</h1>
+    </div>
+        <p style="margin-left:2.5em"><big>Do you want to <a href="{{ url_for('login') }}">log in</a>?</big></p>
+{% endblock %}

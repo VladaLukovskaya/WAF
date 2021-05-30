@@ -7,7 +7,7 @@ import hashlib
 from db_server import get_credentials
 import os
 
-app = Flask(__name__, static_url_path='/static')
+app = Flask(__name__, static_url_path='/static/')
 bootstrap = Bootstrap(app=app)
 # csrf = CSRFProtect(app=app)
 
