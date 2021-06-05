@@ -54,15 +54,18 @@ A rule format
 
 # Output rules
 
-`check_output` argument for enable detect signatures in output traffic (by default `false`)
+`check_output` argument for enabling detect signatures in output traffic (by default `false`)
 
-```
 
 A rule format
 
-- `name` - short name of rule
-- `description`- description of rule
-- `data` - list of strings that will be searched in http response
+```
+rule id:
+ `name` - short name of rule
+ `description`- description of rule
+ `data` - list of strings that will be searched in http response
+
+```
 
 A rule example
 
@@ -71,3 +74,4 @@ A rule example
   name: "linux users creds"
   description: "Linux remote execution cat /etc/passwd"
   data: ["sshd:x:123:65555::/run/sshd:/usr/sbin/nologin"]
+```
