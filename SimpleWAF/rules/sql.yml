@@ -1,0 +1,15 @@
+---
+100001:
+  name: "SQL Injection"
+  description: "the simplest sql attack"
+  body: ["'or"]
+
+100002:
+  name: "SQL symbols"
+  description: "SQl symbols for inject request"
+  body: ["'", "--"]
+
+100003:
+  name: "SQL keywords"
+  description: "SQL keywords for cross table injections:"
+  body: ["union", "select"]
