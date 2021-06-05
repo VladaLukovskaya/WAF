@@ -1,5 +1,10 @@
 # WAF
 
+# What is it
+
+It is a simple Web Application Firewall (WAF) based on Flask that can protect a simple WEB application from SQL injections.
+
+
 # How to use it
 
 Install requirements
@@ -8,20 +13,20 @@ Install requirements
 pip3 install -r requirements.txt
 ```
 
-Edit config file `settings.yml`
+Edit the config file `settings.yml`
 
-- `waf_port` - port for web application firewall
+- `waf_port` - port for the WAF
 - `app_url` - url of base application
 - `check_output` - enable or disable check output mode
 - `logfile` - path for log files
 
-Run waf
+Run the WAF
 
 ```
 python3 proxy.py
 ```
 
-Run app
+Run the app
 
 ```
 python3 app.py
@@ -29,9 +34,9 @@ python3 app.py
 
 # Rules
 
-Path of rules - `rules/`
+Path - `rules/`
 
-Rule example
+A rule example
 
 ```
 100001:
@@ -40,7 +45,7 @@ Rule example
   body: ["'or"]
 ```
 
-Rule format
+A rule format
 
 - `name` - short name of rule
 - `description`- description of rule
@@ -53,16 +58,16 @@ Rule format
 
 ```
 
-Rule format
+A rule format
 
 - `name` - short name of rule
 - `description`- description of rule
 - `data` - list of strings that will be searched in http response
 
-Rule example
+A rule example
 
 ```
 200001:
   name: "linux users creds"
   description: "Linux remote execution cat /etc/passwd"
-  data: ["sshd:x:133:65534::/run/sshd:/usr/sbin/nologin"]
+  data: ["sshd:x:123:65555::/run/sshd:/usr/sbin/nologin"]
